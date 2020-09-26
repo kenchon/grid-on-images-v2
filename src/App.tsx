@@ -1,16 +1,13 @@
 import React from 'react';
-import ComponentType from 'react';
-import logo from './logo.svg';
-import CanvasWrapper from 'components/Canvas'
-import HeaderContainer from 'components/Header'
+import Canvas from 'components/Canvas'
+import Header from 'components/Header'
 
-import './App.css';
-
+// Grid-on-Images のベースコンポーネント
 const App: React.FC = () => {
   return (
     <div className="App">
-      <HeaderContainer/>
-      <CanvasWrapper />
+      <Header />
+      <Canvas />
     </div>
   );
 }
