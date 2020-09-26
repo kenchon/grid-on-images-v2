@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
+import aboutMe from 'assets/about-me.png';
+import github from 'assets/github.png';
 
 const Header = styled.header`
     padding: 30px 4% 30px 30px;
@@ -24,27 +26,48 @@ const Title = styled.h1`
 const Navbar = styled.nav`
     margin: 0 50px 0 0;
     padding-right: 100px;
+    ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+    }
+    li {
+        margin: 0 0 0 15px;
+        font-size: 20px;
+    }
+    li a {
+       color: white;
+    }
 `;
 
-const Icon = (props: any) => {
+const ImgContainer = styled.div`
+    padding-right: 40px;
+    img {
+        width: 80px;
+    }
+`
+
+const Icon = (props: {href: string, src: string}) => {
     return (
-        <a href={props.href}>
-            <img src={props.src}/>
-        </a>
+        <ImgContainer>
+            <a href={props.href}>
+                <img src={props.src}/>
+            </a>
+        </ImgContainer>
     )
 };
 
-function HeaderContainer() {
+const HeaderContainer: React.FC = () => {
     return(
         <Header>
             <Title>Grid on Images</Title>
             <Navbar>
                 <ul>
                     <li>
-                        <Icon href="https://kenchon.github.io/blog/authors/Kenya-Hondoh" src="./assets/about-me.png" />
+                        <Icon href="https://kenchon.github.io/blog/authors/Kenya-Hondoh" src={ aboutMe } />
                     </li>
                     <li>
-                        <Icon href="https://github.com/kenchon/grid-on-images" src="./assets/github.png" />
+                        <Icon href="https://github.com/kenchon/grid-on-images" src={ github } />
                     </li>
                 </ul>
             </Navbar>
@@ -52,4 +75,4 @@ function HeaderContainer() {
     )
 }
 
-export default HeaderContainer();
+export default HeaderContainer;
