@@ -3,7 +3,27 @@ import styled from 'styled-components';
 import aboutMe from 'assets/about-me.png';
 import github from 'assets/github.png';
 
-const Header = styled.header`
+const Header: React.FC = () => {
+    return(
+        <HeaderBlock>
+            <Title>Grid on Images</Title>
+            <Navbar>
+                <ul>
+                    <li>
+                        <Icon href="https://kenchon.github.io/blog/authors/Kenya-Hondoh" src={ aboutMe } />
+                    </li>
+                    <li>
+                        <Icon href="https://github.com/kenchon/grid-on-images" src={ github } />
+                    </li>
+                </ul>
+            </Navbar>
+        </HeaderBlock>
+    )
+}
+
+export default Header;
+
+const HeaderBlock = styled.header`
     padding: 30px 4% 30px 30px;
     position: fixed;
     top: 0;
@@ -56,23 +76,3 @@ const Icon = (props: {href: string, src: string}) => {
         </ImgContainer>
     )
 };
-
-const HeaderContainer: React.FC = () => {
-    return(
-        <Header>
-            <Title>Grid on Images</Title>
-            <Navbar>
-                <ul>
-                    <li>
-                        <Icon href="https://kenchon.github.io/blog/authors/Kenya-Hondoh" src={ aboutMe } />
-                    </li>
-                    <li>
-                        <Icon href="https://github.com/kenchon/grid-on-images" src={ github } />
-                    </li>
-                </ul>
-            </Navbar>
-        </Header>
-    )
-}
-
-export default HeaderContainer;

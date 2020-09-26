@@ -1,6 +1,17 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
+const Canvas: React.FC = () => {
+    return(
+        <CanvasContainer>
+            <ImgCanvas />
+            <GridCanvas />
+        </CanvasContainer>
+    )
+}
+
+export default Canvas;
+
 const CanvasContainer = styled.div`
     position: relative;
     canvas {
@@ -21,14 +32,3 @@ const GridCanvas: React.FC = () => {
         <canvas></canvas>
     )
 }
-
-const AppField: React.FC = () => {
-    return(
-        <CanvasContainer>
-            <ImgCanvas />
-            <GridCanvas />
-        </CanvasContainer>
-    )
-}
-
-export default AppField;
