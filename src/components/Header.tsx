@@ -1,8 +1,9 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import aboutMe from 'assets/about-me.png';
 import github from 'assets/github.png';
 
+// TODO: Parameterize 'href' and 'src' so that they could be injected from App component
 const Header: React.FC = () => {
     return(
         <HeaderBlock>
@@ -43,6 +44,7 @@ const Title = styled.h1`
     padding-left: 30px;
 `;
 
+// TODO: Make Navbar nestable
 const Navbar = styled.nav`
     margin: 0 50px 0 0;
     padding-right: 100px;

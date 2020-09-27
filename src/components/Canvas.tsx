@@ -1,16 +1,5 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-const Canvas: React.FC = () => {
-    return(
-        <CanvasContainer>
-            <ImgCanvas />
-            <GridCanvas />
-        </CanvasContainer>
-    )
-}
-
-export default Canvas;
 
 const CanvasContainer = styled.div`
     position: relative;
@@ -22,13 +11,49 @@ const CanvasContainer = styled.div`
 `
 
 const ImgCanvas: React.FC = () => {
-    return (
+    return(
         <canvas></canvas>
     )
 }
 
 const GridCanvas: React.FC = () => {
-    return (
+    return(
         <canvas></canvas>
     )
 }
+
+class CanvasBoard extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            isGridVisible: false,
+            imgCanvasScale: 1.0
+        }
+    }
+
+    renderImgCanvas: React.FC = () => {
+        return (
+            <ImgCanvas />
+        )
+    }
+    
+    renderGridCanvas: React.FC = () => {
+        return (
+            <GridCanvas />
+        )
+    }
+
+    render() {
+        return (
+            <div>
+                <CanvasContainer>
+                    {this.renderImgCanvas(this.props)}
+                    {this.renderGridCanvas(this.props)}
+                </CanvasContainer>
+            </div>
+        )
+    }
+}
+
+export default CanvasBoard;
