@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import Slider from 'components/Slider';
 
 const CanvasContainer = styled.div`
     position: relative;
+    margin: 300px 20px 0 30px;
+    width: 100%;
     canvas {
         position: absolute;
         top: 0;
@@ -23,7 +26,7 @@ const GridCanvas: React.FC = () => {
 }
 
 class CanvasBoard extends React.Component {
-    constructor(props) {
+    constructor(props: any) {
         super(props);
         
         this.state = {
@@ -48,6 +51,7 @@ class CanvasBoard extends React.Component {
         return (
             <div>
                 <CanvasContainer>
+                    <Slider />
                     {this.renderImgCanvas(this.props)}
                     {this.renderGridCanvas(this.props)}
                 </CanvasContainer>
