@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slider from 'components/Slider';
 
 const CanvasContainer = styled.div`
     position: relative;
@@ -52,7 +51,6 @@ class CanvasBoard extends React.Component {
         return (
             <div>
                 <CanvasContainer>
-                    <Slider />
                     {this.renderImgCanvas(this.props)}
                     {this.renderGridCanvas(this.props)}
                 </CanvasContainer>
