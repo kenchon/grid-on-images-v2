@@ -8,6 +8,7 @@ const CanvasContainer = styled.div`
     width: 100%;
     canvas {
         position: absolute;
+        margin-top: 100px;
         top: 0;
         left: 0;
     }
