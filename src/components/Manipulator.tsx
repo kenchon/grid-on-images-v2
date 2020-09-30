@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from 'components/Slider'
+import GridColorButton from 'components/GridColorButton'
 
 const Manipulator: React.FC = () => {
     return (
@@ -16,7 +17,7 @@ const Manipulator: React.FC = () => {
                 </tr>
                 <tr>
                     <td>グリッドの色</td>
-                    <td>TODO: グリッド色選択ボタン</td>
+                    <td><GridColorButton /></td>
                 </tr>
             </table>
         </StyledManipulator>
