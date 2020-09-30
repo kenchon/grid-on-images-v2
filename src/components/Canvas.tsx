@@ -35,6 +35,10 @@ class CanvasBoard extends React.Component {
         }
     }
 
+    // componentDidMount() {
+    //     document.getElementById('button-grid-on-off').addEventListener('click', this.toggleGridVisility);
+    // }
+
     renderImgCanvas: React.FC = () => {
         return (
             <ImgCanvas />
