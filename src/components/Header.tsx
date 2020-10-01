@@ -3,18 +3,24 @@ import styled from 'styled-components';
 import aboutMe from 'assets/about-me.png';
 import github from 'assets/github.png';
 
+
+type HeaderProps = {
+    urlToAboutMe: string,
+    urlToGithubRepos: string
+}
+
 // TODO: Parameterize 'href' and 'src' so that they could be injected from App component
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = (props) => {
     return(
         <HeaderBlock>
             <Title>Grid on Images</Title>
             <Navbar>
                 <ul>
                     <li>
-                        <Icon href="https://kenchon.github.io/blog/authors/Kenya-Hondoh" src={ aboutMe } />
+                        <Icon href={ props.urlToAboutMe } src={ aboutMe } />
                     </li>
                     <li>
-                        <Icon href="https://github.com/kenchon/grid-on-images" src={ github } />
+                        <Icon href={ props.urlToGithubRepos } src={ github } />
                     </li>
                 </ul>
             </Navbar>
