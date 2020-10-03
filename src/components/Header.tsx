@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 type HeaderProps = {
     aboutMeIcon: {
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = (props) => {
     )
 }
 
-export default Header;
+export default Header
 
 const HeaderBlock = styled.header`
     padding: 30px 4% 30px 30px;
@@ -45,19 +45,19 @@ const HeaderBlock = styled.header`
     color: white;
     height: 100px;
     z-index: 999;
-`;
+`
 
 const Title = styled.h1`
     font-style: italic;
     color: white;
     padding-left: 30px;
-`;
+`
 
-// TODO: Make Navbar nestable
 const Navbar = styled.nav`
-    margin: 0 50px 0 0;
     padding-right: 100px;
+
     ul {
+        padding: 0 50px 0 auto;
         list-style: none;
         margin: 0;
         display: flex;
@@ -66,15 +66,12 @@ const Navbar = styled.nav`
         margin: 0 0 0 15px;
         font-size: 20px;
     }
-    li a {
-       color: white;
-    }
-`;
+`
 
 const ImgContainer = styled.div`
     padding-right: 40px;
     img {
-        width: 80px;
+        width: 60px;
     }
 `
 
@@ -86,4 +83,4 @@ const Icon = (props: {href: string, src: string}) => {
             </a>
         </ImgContainer>
     )
-};
+}
