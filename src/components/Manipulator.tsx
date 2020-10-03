@@ -10,9 +10,8 @@ const Manipulator: React.FC = () => {
         <StyledManipulator>
             <table>
                 <tr>
-                    <td>画像を選択</td>
-                    {/* <td><UploadImageButton /></td> */}
-                    <td>{"TODO: ファイルアップロードボタン"}</td>
+                    <td><UploadImageButton /></td>
+                    <td>{/*TODO: 選択した画像ファイル名を表示*/}</td>
                 </tr>
                 <tr>
                     <td>画像サイズ</td>
@@ -31,7 +30,7 @@ const StyledManipulator = styled.div`
     margin: 200px 0 200px 0;
     padding-left: 50px;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
 `;
 
 export default Manipulator;
