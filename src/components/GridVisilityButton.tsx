@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const GridVisilityButton: React.FC = () => {
     return (
@@ -16,6 +16,8 @@ const GridVisilityButton: React.FC = () => {
     //   </div>
     )
 }
+
+export default GridVisilityButton
 
 const SwitchContainer = styled.span`
     top: 8px;
@@ -97,5 +99,3 @@ const SwitchLabel = styled.label`
         height: 100%;
     }
 ` */}
-
-export default GridVisilityButton;

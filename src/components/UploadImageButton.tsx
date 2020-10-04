@@ -1,6 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const UploadImageButton: React.FC = () => {
+    return (
+        <div>
+            <StyledUploadImageButton>
+                画像を選択
+                <input type="file"/>
+            </StyledUploadImageButton>
+        </div>
+    )
+}
+
+export default UploadImageButton
+
 const StyledUploadImageButton = styled.label`
     display: inline-block;
     font-size: 20px;
@@ -24,16 +37,3 @@ const StyledUploadImageButton = styled.label`
         display: none;
     }
 `
-
-const UploadImageButton: React.FC = () => {
-    return (
-        <div>
-            <StyledUploadImageButton>
-                画像を選択
-                <input type="file"/>
-            </StyledUploadImageButton>
-        </div>
-    )
-}
-
-export default UploadImageButton;

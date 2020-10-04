@@ -10,6 +10,8 @@ const GridColorButton:React.FC = () => {
     )
 }
 
+export default GridColorButton
+
 const StyledGridColorButton = styled.div`
     display: inline-block;
     padding-left: 10px;
@@ -68,5 +70,3 @@ const GridColorBlack = styled.a`
         background: #bababa;
     }
 `
-
-export default GridColorButton;

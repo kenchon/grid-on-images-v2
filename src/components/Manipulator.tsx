@@ -24,13 +24,13 @@ const Manipulator: React.FC = () => {
             </table>
         </StyledManipulator>
     )
-};
+}
+
+export default Manipulator
 
 const StyledManipulator = styled.div`
     margin: 200px 0 200px 0;
     padding-left: 50px;
     font-weight: 700;
     font-size: 25px;
-`;
-
-export default Manipulator;
+`

@@ -1,29 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const CanvasContainer = styled.div`
-    position: relative;
-    margin: 300px 20px 0 30px;
-    width: 100%;
-    canvas {
-        position: absolute;
-        margin-top: 100px;
-        top: 0;
-        left: 0;
-    }
-`
-
-const ImgCanvas: React.FC = () => {
-    return(
-        <canvas></canvas>
-    )
-}
-
-const GridCanvas: React.FC = () => {
-    return(
-        <canvas></canvas>
-    )
-}
+import React from 'react'
+import styled from 'styled-components'
 
 class CanvasBoard extends React.Component {
     constructor(props: any) {
@@ -63,4 +39,28 @@ class CanvasBoard extends React.Component {
     }
 }
 
-export default CanvasBoard;
+export default CanvasBoard
+
+const CanvasContainer = styled.div`
+    position: relative;
+    margin: 300px 20px 0 30px;
+    width: 100%;
+    canvas {
+        position: absolute;
+        margin-top: 100px;
+        top: 0;
+        left: 0;
+    }
+`
+
+const ImgCanvas: React.FC = () => {
+    return(
+        <canvas></canvas>
+    )
+}
+
+const GridCanvas: React.FC = () => {
+    return(
+        <canvas></canvas>
+    )
+}
