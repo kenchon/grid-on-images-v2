@@ -13,6 +13,4 @@ const Slider: React.FC = () => {
 
 export default Slider
 
-const StyledSlider = styled.div`
-    margin: 300px 0 100px 0;
-`
+const StyledSlider = styled.div``
